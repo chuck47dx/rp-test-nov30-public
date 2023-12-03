@@ -10,20 +10,14 @@ FROM (
 SELECT att."FILE SIZE" "File Size",
 att."NAME" "File Name",
 cwd."email address" "Owner Email Address",
-CONCAT ('http: //<BASE URL›/rest/tests/l.0/attachment/', att."ID") "Attachment Download",
-cases,."KEY" Test"
-Test Case' AS "Test Tvpe
-CONCAT ("http: //«BASE URL>/ secure Tests.jspa#/testCase/',
-cases. "KEY") "URL"
+CONCAT ('https://<BASE URL›/rest/tests/l.0/attachment/', att."ID") "Attachment Download",
+cases,."KEY" Test",
+'Test Case' AS "Test Type",
+CONCAT ('https://<BASE URL>/secure/Tests.jspa#/testCase/', cases."KEY") "URL"
   
-FROM
-MAO
-4D28DD ATTACHMENT"
-att
-JOIN "app user"
-appu oN apou.user
-rev
-att. "USER KEY"
+FROM "AO_4D28DD_ATTACHMENT" att
+JOIN "app user" appu on appu.user_key = att."USER KEY"
+  
 JOIN lewd
 user"
 eWO ON cwd. lower
